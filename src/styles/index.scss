@@ -1,0 +1,97 @@
+// * {
+//     border: 1px red solid;
+// }
+
+html, body {
+    border-color: blue;
+    height: 100vh;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+.column {
+    height: 100vh;
+}
+
+.right-column {
+    overflow: scroll;
+    border-left: 1px solid grey;
+
+    .content {
+        margin: 2rem 0;
+
+        .title {
+            text-align: center;
+        }
+
+        .description-box {
+            max-width: 80%;
+            flex-direction: column;
+            .description {
+                padding: 1rem;
+                text-align: justify;
+                font-size: 0.9rem;
+                line-height: 1.5rem;
+                letter-spacing: 0.7px;
+            }
+        }
+    }
+    .column-image {
+        max-width: 40%;
+        margin: 0.5rem 0 2rem 0;
+    }
+}
+
+.left-column {
+    .container {
+        border-color: blue;
+        form {
+            margin-bottom: 1.5rem;
+            input {
+                margin-top: 0.35rem;
+            }
+            #showPassText {
+                font-size: 0.7rem;
+                margin-right: 0.35rem;
+            }
+        }
+        .report {
+            .report-items {
+                font-size: 1rem;
+                color: grey;
+                margin-top: 0.2rem;
+            }
+            #contains-criteria {
+                margin-bottom: 0.4rem;
+            }
+            .tag {
+                margin-right: 10px;
+            }
+            .progress {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.centered-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 750px) {
+    .columns {
+        flex-direction: column;
+        .left-column {
+            max-height: 70vh;
+        }
+        .right-column {
+            border-top: 1px solid grey;
+        }
+    }
+}
